@@ -1,0 +1,20 @@
+import type { Metadata } from "next";
+import { ArrowRight, Check, FileText, Fingerprint, Plane } from "lucide-react";
+import { PageIntro } from "@/components/page-parts";
+import { JsonLd } from "@/components/json-ld";
+import { faqPageSchema } from "@/lib/schema";
+import type { FaqItem } from "@/types/package";
+import Link from "next/link";
+
+export const metadata: Metadata = { title: "Umrah Visa Assistance", description: "Understand the usual documents and process for Umrah visa assistance. Eligibility and rules are subject to current Saudi requirements." };
+
+const faqs: FaqItem[] = [
+  { question: "What documents are usually needed for an Umrah visa?", answer: "Requirements can change. Commonly requested items include a passport with sufficient validity, recent photographs and confirmed travel details. We provide a current checklist after reviewing your travel dates and nationality." },
+  { question: "How long does Umrah visa processing take?", answer: "Processing time depends on current regulations, application completeness and the relevant authorities. We will share the current estimate for your application; no processing time can be guaranteed." },
+  { question: "Can I travel for Umrah on a tourist visa?", answer: "Visa eligibility and permitted pilgrimage travel depend on current Saudi rules and visa conditions. Confirm the latest official guidance for your visa type before booking." },
+  { question: "Does visa assistance guarantee approval?", answer: "No. Visa issuance and entry are decided by the relevant authorities. Assistance with an application does not guarantee approval." },
+];
+
+export default function VisaPage() {
+  return <><JsonLd data={faqPageSchema(faqs)} /><PageIntro eyebrow="UMRAH VISA ASSISTANCE" title={<>Less uncertainty.<br /><em>Clear next steps.</em></>} description="We help you understand the current visa process and prepare a careful application. Eligibility and decisions remain with the relevant authorities."><Link className="button button-primary" href="/contact">Ask about your documents <ArrowRight size={17} /></Link></PageIntro><section className="section plain-section"><div className="wrap visa-layout"><div><p className="eyebrow">A CLEARER PROCESS</p><h2>From checklist<br />to departure.</h2><div className="visa-steps"><article><span><FileText /></span><div><b>01 · Check your documents</b><p>We share a current checklist based on your nationality and travel dates.</p></div></article><article><span><Fingerprint /></span><div><b>02 · Prepare your application</b><p>Review details carefully and submit the requested information securely.</p></div></article><article><span><Check /></span><div><b>03 · Track the next steps</b><p>We explain the process and relay updates when they are available.</p></div></article><article><span><Plane /></span><div><b>04 · Confirm before travel</b><p>Check your issued visa details and current entry requirements before departure.</p></div></article></div></div><aside className="visa-note"><p className="eyebrow">USUALLY REQUESTED</p><h3>Start gathering</h3><ul>{["Valid passport", "Recent passport-size photograph", "Travel and accommodation details", "Additional items requested under current rules"].map((item) => <li key={item}><Check size={16} />{item}</li>)}</ul><p>Do not send passport copies or sensitive documents over an unverified channel. We will explain the approved submission method.</p><a href="tel:+919691017171" className="text-link">Ask our visa team <ArrowRight size={16} /></a></aside></div></section><section className="section faq-section"><div className="wrap faq-wrap"><div><p className="eyebrow">COMMON QUESTIONS</p><h2>Good to know.</h2></div><div className="faq-list">{faqs.map((faq) => <details key={faq.question}><summary>{faq.question}<span>+</span></summary><p>{faq.answer}</p></details>)}</div></div></section></>;
+}
