@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowRight, MapPin } from "lucide-react";
 import { PageIntro } from "@/components/page-parts";
 
-export const metadata: Metadata = { title: "Makkah & Madinah Ziyarat Tours", description: "Explore guided historical ziyarat visits in Makkah and Madinah with Al Farooque Travels." };
+export const metadata: Metadata = { title: "Makkah & Madinah Ziyarat Tours", description: "Explore guided historical ziyarat visits in Makkah and Madinah with Al Faroque Tours and Travels." };
 
 const sites = [
   { name: "Makkah · Jabal al-Nour", note: "A visit to the area of the Cave of Hira. The climb is strenuous and is not suitable for everyone; joining is optional.", image: "https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=900&q=85" },

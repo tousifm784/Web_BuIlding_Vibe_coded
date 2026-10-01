@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react";
 
 const links = [
   { href: "/packages/umrah", label: "Umrah" },
+  { href: "/custom-travel", label: "Custom trips" },
   { href: "/packages/hajj", label: "Hajj" },
   { href: "/packages/ziyarat-tours", label: "Ziyarat" },
   { href: "/past-tours", label: "Our journeys" },
@@ -18,9 +19,9 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <div className="header-inner wrap">
-        <Link className="brand" href="/" aria-label="Al Farooque Travels home" onClick={() => setOpen(false)}>
+        <Link className="brand" href="/" aria-label="Al Faroque Tours and Travels home" onClick={() => setOpen(false)}>
           <span className="brand-mark" aria-hidden="true">AF</span>
-          <span className="brand-name">Al Farooque <small>TRAVELS</small></span>
+          <span className="brand-name">Al Faroque <small>TOURS AND TRAVELS</small></span>
         </Link>
         <nav className={`main-nav ${open ? "is-open" : ""}`} aria-label="Main navigation">
           {links.map((link) => <Link key={link.href} href={link.href} onClick={() => setOpen(false)}>{link.label}</Link>)}

@@ -5,7 +5,7 @@ import { PageIntro } from "@/components/page-parts";
 
 export const metadata: Metadata = {
   title: "Past Umrah Groups & Journeys",
-  description: "Learn about Al Farooque Travels' 19+ completed pilgrimage group journeys and ask our team about group support.",
+  description: "Learn about Al Faroque Tours and Travels' 19+ completed pilgrimage group journeys and ask our team about group support.",
 };
 
 const destinations = [
@@ -21,7 +21,7 @@ export default function PastToursPage() {
       <PageIntro
         eyebrow="19+ GROUP JOURNEYS COMPLETED"
         title={<>Every group has<br /><em>a story to carry home.</em></>}
-        description="Since 2021, Al Farooque Travels has guided more than 19 pilgrimage groups from central India and beyond."
+        description="Since 2021, Al Faroque Tours and Travels has guided more than 19 pilgrimage groups from central India and beyond."
       >
         <Link className="button button-primary" href="/packages/umrah">
           Explore upcoming journeys <ArrowRight size={17} />

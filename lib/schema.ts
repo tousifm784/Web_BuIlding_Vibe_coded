@@ -10,7 +10,7 @@ export function travelAgencySchema() {
   return {
     "@context": "https://schema.org",
     "@type": ["TravelAgency", "LocalBusiness"],
-    name: "Al Farooque Travels",
+    name: "Al Faroque Tours and Travels",
     url: siteUrl,
     telephone: "+91-969-101-7171",
     address: {

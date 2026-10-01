@@ -1,4 +1,4 @@
-# Al Farooque Travels
+# Al Faroque Tours and Travels
 
 A Next.js App Router website for guided Umrah, Hajj inquiries and Ziyarat travel from Burhanpur, India.
 

@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const item = getPackageBySlug(slug);
   if (!item) return { title: "Umrah package not found" };
-  return { title: item.name, description: `${item.summary} Ask Al Farooque Travels about current dates, hotel options and departures from India.`, openGraph: { images: [item.image] } };
+  return { title: item.name, description: `${item.summary} Ask Al Faroque Tours and Travels about current dates, hotel options and departures from India.`, openGraph: { images: [item.image] } };
 }
 
 export default async function PackageDetailPage({ params }: Props) {
